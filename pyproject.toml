@@ -7,7 +7,6 @@ name = "arraybackend"
 dynamic = ["version"]
 dependencies = [
   "numpy>=2.4.1",
-  "cupy>=13.6.0"
 ]
 requires-python = ">=3.13"
 authors = [
@@ -19,6 +18,8 @@ license = "MIT"
 license-files = ["LICENSE"]
 
 [project.optional-dependencies]
+cuda12 = ["cupy-cuda12x>=13.6.0"]
+cuda13 = ["cupy-cuda13x>=13.6.0"]
 dev = [
   "pytest>=7.4",
   "pytest-cov",
