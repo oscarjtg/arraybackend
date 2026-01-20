@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arraybackend"
+dynamic = ["version"]
+dependencies = [
+  "numpy>=2.4.1",
+  "cupy>=13.6.0"
+]
+requires-python = ">=3.13"
+authors = [
+  { name = "Oscar Tovey Garcia", email = "otoveyg@gmail.com" }
+]
+description = "Wrapper for different array backends (numpy, cupy)."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.4",
+  "pytest-cov",
+  "black",
+  "isort",
+  "flake8",
+  "pre-commit",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py314"]
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203"]
+
+[project.urls]
+Homepage = "https://github.com/oscarjtg/arraybackend"
+Issues = "https://github.com/oscarjtg/arraybackend/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
