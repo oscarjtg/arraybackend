@@ -34,10 +34,10 @@ python -m site --user-site
 Then install the package locally. 
 If you wish to execute on NVIDIA GPUs, you must select an optional dependency depending on your CUDA version: 
 
-Optional dependency | CUDA Version
-------------------
-`[cuda12]` | 12.x
-`[cuda13]` | 13.x
+| Optional dependency | CUDA Version |
+| --- | --- |
+| `[cuda12]` | 12.x |
+| `[cuda13]` | 13.x |
 
 The `bash` script below creates and activates a virtual environment called `myenv`, 
 clones this repository into the Python user site-packages directory, 
@@ -50,3 +50,4 @@ cd `python -m site --user-site`
 git clone https://github.com/oscarjtg/arraybackend.git
 cd arraybackend
 pip install -e .[cuda12]
+```
