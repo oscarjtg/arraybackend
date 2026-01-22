@@ -1,6 +1,6 @@
 import numpy as np
 
-from arraybackend import ArrayBackend
+from .interface import ArrayBackend
 
 
 class ArrayBackendCPU(ArrayBackend):

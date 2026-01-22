@@ -1,4 +1,4 @@
-from arraybackendcpu import ArrayBackendCPU
-from arraybackendgpu import ArrayBackendGPU
+from .arraybackendcpu import ArrayBackendCPU
+from .arraybackendgpu import ArrayBackendGPU
 
 __all__ = ["ArrayBackendCPU", "ArrayBackendGPU"]
